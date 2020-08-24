@@ -4,45 +4,60 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <style>  
-      html,body    {
-            margin:5px
+    <style>
+        html, body {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div style="background-color:red; 
-    color:blue;
-    height:100px;
-    padding-left:500px;
-    padding-top:50px;
-    border:5px dashed #0d0d71;
-    font-size:medium;
-    font-style:italic;
-    font-family:'Times New Roman', Times, serif;
-    font-weight:bold">
-        first block
+    <div style="display:flex;height:10vh;border:2px solid black;border-radius:15px;justify-content:center;align-items:center;background-color:aqua;margin-bottom:2px;font-size:48px">
+        Header
     </div>
-    <div style="background-color:yellow; color:black;height:100px;
-    padding-left:500px;
-    padding-top:50px;
-    border:5px double rgba(234, 108, 18, 0.8);
-    font-size:large;
-    font-style:italic;
-    font-family:'Times New Roman', Times, serif;
-    font-weight:bold">
-        second block
+    <div style="        height: 80vh;
+        display: flex;">
+        <div style="
+          flex: 0.2;
+          background: yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-size: 64px;
+          border:2px solid black;border-radius:15px; margin:2px;">
+            1
+        </div>
+        <div style="        flex: 0.6;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 64px;
+        border: 2px solid black;
+        border-radius: 17px; margin:2px;">
+            <img src="https://picsum.photos/id/1019/1200/1200" alt=" " style="height:100%;width:100%;object-fit:cover;border-radius:15px;">
+        </div>
+        <div style="        flex: 0.2;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 64px;
+        border: 2px solid black;
+        border-radius: 15px;margin:2px;">
+            3
+        </div>
     </div>
-    <div style="background-color: green; color: red; height:100px;
-    padding-left:500px;
-    padding-top:50px;
-    border:5px dotted red;
-    font-size:larger;
-    font-style:oblique;
-    font-family:Arial;
-    font-weight:bolder">
-        third block
+    <div style="        display: flex;
+        height: 10vh;
+        border: 2px solid black;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;margin-top:2px;font-size:48px">
+        Footer
     </div>
-
 </body>
 </html>
