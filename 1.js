@@ -1,169 +1,31 @@
-// setInterval
-// executes functions after every given millisecond
-let lam= ()=> {
-    console.log('Hello');}
+let commcounter=1;
+function like(btn) {
+    // let v = btn.innerHTML;
+    // let counter=parseInt(v);
+    let counter=parseInt(btn.innerHTML);
+    btn.innerHTML=++counter; 
+    // let counter=parseInt(btn.children[1].innerHTML);
+    // btn.children[1].innerHTML=++counter; 
+}
 
-setInterval(lam,1000);
+function comment(){
+    let usercomm=document.querySelector('#inputid').value;
+    const element=document.createElement('div');
 
-// setTimeout
-// executes only once after given millisecond
+    const child1 = document.createElement('div');
+    const child2 = document.createElement('button');
 
-setTimeout(lam, 100);
+    child1.textContent=usercomm;
+    child2.textContent='Delete';
 
-// clearInterval
-// to clear setInterval it works only if function is of Var type
+    element.appendChild(child1);
+    element.appendChild(child2);
 
-clearInterval(lam);
-
-// clearTimeout
-// to clear setTimeout it works only if function is of Var type
-
-clearTimeout(lam);
-
-// Non Blocking Functions
-// does not holds execution of functions in sequence till the function which takes more time is not executed.
-
-function example() {
-    console.log('1');
-    console.log('2');
-    setTimeout(()=>{console.log('timeOut function');})
-    console.log('3');
-    console.log('4');};
+    element.style.background="black";
+    element.style.color='white';
+    element.style.font='15px';
     
-example();
+    document.querySelector('#commbox').appendChild(element);
 
 
-// Blocking Functions
-// it holds the execution no matter how much time any intermediate function takes.
-
-function example1() {
-    console.log('1');
-    console.log('2');
-    console.log('mid');
-    console.log('3');
-    console.log('4');}
-
-    example1();
-
-// Empty Array
-let arr=[];
-
-
-// array accesibility
-
-let arr=[];
-
-arr.push('parag');
-    
-arr.push('1002');
-
-arr.push(true);
-
-arr[1];
-//"1002"
-
-arr[2];
-// true
-
-arr.push(()=>{console.log('hey')});
-// store arrow function
-//["omkar", "1002", true, ƒ, undefined, ƒ]
-
-arr.push(lam);
-//["omkar", "1002", true, ƒ, undefined, ƒ]
-
-// array can only update value at particular location only by deleting existing value.
-
-arr[2]=2005;
-// ["omkar", "1002", 2005, ƒ, undefined, ƒ]
-
-arr[2]=3005;
-// ["omkar", "1002", 3005, ƒ, undefined, ƒ]
-
-
-//* Splice  *//
-
-// splice to add element at particular location without deleting existing element
-arr.Splice(1,0,1003,1004);
-//["omkar", 1003, 1004, "1002", 3005, ƒ, undefined, ƒ]
-
-
-
-// to delete items from array  
-
-arr.splice(1,2);
-
-// # ["omkar", "1002", 3005, ƒ, undefined, ƒ]
-
-
-// splice to add element at particular location by deleting existing element
-
-arr.splice(4,1,()=>{console.log('hehehe')});
-
-// # ["omkar", "1002", 3005, ƒ, ƒ, ƒ]
-
-//*         JSON            *//
-
-let pqr=
-{
-    name:"Ram",
-};
-
-// CALLING OBJECT 
-pqr;
-//{name: "Ram"}
-
-// CALLING OBJECT WITH SPECIIC KEY 
-
-pqr.name;
-//"Ram"
-
-// STORE ARRAY IN OBJECT
-
-let xyz=
-{
-    array:[1,'raj',true],
-};
-
-xyz.array[1];
-//#  "raj"
-
-
-// for special char key name
-
-let xyz=
-{
-    array:[1,'raj',true],
-    first name:'omkar',
-};
-// VM2040:4 Uncaught SyntaxError: Unexpected identifier         HENCE USE 
-
-let xyz=
-{
-    array:[1,'raj',true],
-    'first name':'omkar',
-};
-
-
-// TO ACCESS SPECIAL CHAR VALUE
-
-xyz.first name;         // ERROR
-// VM2105:1 Uncaught SyntaxError: Unexpected identifier
-xyz.['first name'];     // ERROR
-// VM2117:1 Uncaught SyntaxError: Unexpected token '['
-
-xyz['first name'];
-//  # "omkar"
-
-//*  ARRAY TO STORE OBJECT  
-
-let arr1 = [
-    pqr,
-    xyz,];
-
-// TO ACCESS OBJECT VALUE IN ARRAY
-arr1[1].array[1];
-// #"raj"
-
-arr1[1]['first name'];
-// "omkar"
+    doc
