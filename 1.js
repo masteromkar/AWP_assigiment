@@ -1,26 +1,24 @@
-let counter=1;
-let commcounter=1;
-function like() {
-    document.querySelector('#likeid').innerHTML=counter++   
-}
-function comment(){
-    let usercomm=document.querySelector('#inputid').value;
-    
-   const newElement= document.querySelector("#reference").cloneNode(true);
-    newElement.removeAttribute("id"); //good practice to keep unique id.
-    newElement.style.visibility = "visible";
-    newElement.children[0].innerHTML=usercomm;
-
-    // newElement.children[1].innerHTML=commcounter++;
-
-    commbox.insertBefore(newElement,commbox.firstChild)
-    // commentBox.insertBefore(newElement, commentBox.firstChild);
-    // document.querySelector('#commbox').appendChild(newElement);
-
-
-    document.querySelector('#inputid').value="";
+// named function
+let abc= function first() {
+    console.log('Hello Named function');
 }
 
-function delcomm(delid) {
-    delid.parentElement.remove();
-  }
+first();
+
+
+// asynonims function
+
+let pqr= function () {
+    console.log('Hello asynonims function');
+}
+
+pqr();
+
+// Lamda or Arrow Functon
+let xyz = ()=>{
+    console.log('Hello arrow function');
+}
+
+xyz();
+
+// Parameterised function
