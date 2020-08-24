@@ -1,63 +1,30 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External JS</title>
+    <script src="1.js"></script>
+    <!-- <link rel="stylesheet" href="6.css"/> for css file -->
     <style>
-        html, body {
-            margin: 0;
-        }
+    .myclass{
+        background: url("https://picsum.photos/1200/1200");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
     </style>
 </head>
 <body>
-    <div style="display:flex;height:10vh;border:2px solid black;border-radius:15px;justify-content:center;align-items:center;background-color:aqua;margin-bottom:2px;font-size:48px">
-        Header
+    <div class="myclass" style="display: flex;justify-content: center;align-items: center;">
+        <button onclick="External_js()" style="font-size:xx-large; font-family: cursive; font-weight: bolder; 
+                                                        color: brown; border: 3px darkgreen double; border-radius: 15px;
+                                                        padding: 10px; cursor: pointer;box-shadow:white; text-shadow: black;">
+            Click to proceed
+        </button>
+
     </div>
-    <div style="        height: 80vh;
-        display: flex;">
-        <div style="
-          flex: 0.2;
-          background: yellow;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: black;
-          font-size: 64px;
-          border:2px solid black;border-radius:15px; margin:2px;">
-            1
-        </div>
-        <div style="        flex: 0.6;
-       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 64px;
-        border: 2px solid black;
-        border-radius: 17px; margin:2px;">
-            <img src="https://picsum.photos/id/1019/1200/1200" alt=" " style="height:100%;width:100%;object-fit:cover;border-radius:15px;">
-        </div>
-        <div style="        flex: 0.2;
-        background-color: yellow;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
-        font-size: 64px;
-        border: 2px solid black;
-        border-radius: 15px;margin:2px;">
-            3
-        </div>
-    </div>
-    <div style="        display: flex;
-        height: 10vh;
-        border: 2px solid black;
-        border-radius: 15px;
-        justify-content: center;
-        align-items: center;
-        background-color: aqua;margin-top:2px;font-size:48px">
-        Footer
-    </div>
+    
 </body>
 </html>
