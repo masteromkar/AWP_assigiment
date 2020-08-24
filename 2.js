@@ -1,15 +1,12 @@
 let counter=1;
-function increment()
-{
-    counter++;
-    document.querySelector("#countid").innerHTML=counter;
+let commcounter=1;
+function like() {
+    document.querySelector('#likeid').innerHTML=counter++   
 }
-function decrement()
-{
-    counter--;
-    document.querySelector("#countid").innerHTML=counter;
-}
-function addincrement()
-{
-
+function comment(){
+    let element=document.createElement('div');
+    element.textContent='new comment'+ commcounter++;
+    element.style.background="black";
+    element.style.font='15px';
+    document.querySelector('#commid').appendChild(element);
 }
