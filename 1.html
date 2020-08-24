@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>External JS</title>
+    <title>Document</title>
     <script src="1.js"></script>
-    <!-- <link rel="stylesheet" href="6.css"/> for css file -->
-    <style>
-    .myclass{
-        background: url("https://picsum.photos/1200/1200");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-    }
-    </style>
 </head>
 <body>
-    <div class="myclass" style="display: flex;justify-content: center;align-items: center;">
-        <button onclick="External_js()" style="font-size:xx-large; font-family: cursive; font-weight: bolder; 
-                                                        color: brown; border: 3px darkgreen double; border-radius: 15px;
-                                                        padding: 10px; cursor: pointer;box-shadow:white; text-shadow: black;">
-            Click to proceed
-        </button>
+    <div style="background: violet;display: flex;justify-content: flex-start;align-items: center;flex-direction: column;height: 100vh;">
+        <div style="display: flex;">
+            <button onclick="comment()" style="background: pink; color: black;margin: 5px;height: 30px;">comment</button>
+       <div id="likeid" style="font:25px;margin: 5px;">1</div> 
+        <button onclick="like()" style="background:rgb(165, 165, 252); color: black;margin: 5px; height: 30px;">Like</button>
+        </div>
+    <div style="color: white;display: flex;flex-direction: column;" id="commid"> </div>
 
     </div>
+    
+    
     
 </body>
 </html>
